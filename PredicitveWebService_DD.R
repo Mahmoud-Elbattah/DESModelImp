@@ -10,8 +10,8 @@ options(RCurlOptions = list(cainfo = system.file("CurlSSL", "cacert.pem", packag
 h = basicTextGatherer()
 hdr = basicHeaderGatherer()
 predictions <-  data.frame()
-StepSize <-10
-for( i in seq(188001,nrow(generatedPatients), by=StepSize)){
+StepSize <-1000
+for( i in seq(1,nrow(generatedPatients), by=StepSize)){
 partition<- list(0)
 counter <- i
 for(j in 1:StepSize)
